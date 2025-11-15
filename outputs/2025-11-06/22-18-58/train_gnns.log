@@ -1,0 +1,202 @@
+[2025-11-06 22:18:58,297][__main__][INFO] - version_base: null
+seed: 42
+device_id: 0
+datasets:
+  dataset_root: ./data
+  dataset_name: mutag
+  random_split_flag: true
+  data_split_ratio:
+  - 0.8
+  - 0.1
+  - 0.1
+models:
+  gnn_name: gcn
+  gnn_saving_dir: C:\Users\soham\Desktop\AI project\PrototypeGNN\checkpoints\42
+  param:
+    graph_classification: true
+    batch_size: 128
+    num_epochs: 300
+    num_early_stop: 50
+    learning_rate: 0.001
+    weight_decay: 0.0001
+    gnn_latent_dim:
+    - 128
+    - 128
+    - 128
+    fc_latent_dim:
+    - 128
+    gnn_dropout: 0.0
+    fc_dropout: 0.0
+    milestones:
+    - 150
+    - 250
+    gamma: 0.5
+
+[2025-11-06 22:18:59,175][__main__][INFO] - GCNNet(
+  (readout_layer): GNNPool()
+  (convs): ModuleList(
+    (0): GCNConv(7, 128)
+    (1-2): 2 x GCNConv(128, 128)
+  )
+  (mlps): ModuleList(
+    (0): Linear(in_features=128, out_features=128, bias=True)
+    (1): Linear(in_features=128, out_features=2, bias=True)
+  )
+)
+[2025-11-06 22:18:59,616][__main__][INFO] - Epoch:0, Training_loss:0.6817, Eval_loss:0.6942, Eval_acc:0.5000
+[2025-11-06 22:18:59,619][__main__][INFO] - saving best...
+[2025-11-06 22:18:59,687][__main__][INFO] - Epoch:1, Training_loss:0.6801, Eval_loss:0.6957, Eval_acc:0.5000
+[2025-11-06 22:18:59,717][__main__][INFO] - Epoch:2, Training_loss:0.6622, Eval_loss:0.6985, Eval_acc:0.5000
+[2025-11-06 22:18:59,749][__main__][INFO] - Epoch:3, Training_loss:0.6464, Eval_loss:0.7039, Eval_acc:0.5000
+[2025-11-06 22:18:59,789][__main__][INFO] - Epoch:4, Training_loss:0.6622, Eval_loss:0.7115, Eval_acc:0.5000
+[2025-11-06 22:18:59,833][__main__][INFO] - Epoch:5, Training_loss:0.5964, Eval_loss:0.7225, Eval_acc:0.5000
+[2025-11-06 22:18:59,886][__main__][INFO] - Epoch:6, Training_loss:0.6225, Eval_loss:0.7403, Eval_acc:0.5000
+[2025-11-06 22:18:59,925][__main__][INFO] - Epoch:7, Training_loss:0.6034, Eval_loss:0.7668, Eval_acc:0.5000
+[2025-11-06 22:18:59,957][__main__][INFO] - Epoch:8, Training_loss:0.6139, Eval_loss:0.8002, Eval_acc:0.5000
+[2025-11-06 22:19:00,002][__main__][INFO] - Epoch:9, Training_loss:0.5732, Eval_loss:0.8305, Eval_acc:0.5000
+[2025-11-06 22:19:00,055][__main__][INFO] - Epoch:10, Training_loss:0.6421, Eval_loss:0.8412, Eval_acc:0.5000
+[2025-11-06 22:19:00,082][__main__][INFO] - Epoch:11, Training_loss:0.6014, Eval_loss:0.8251, Eval_acc:0.5000
+[2025-11-06 22:19:00,118][__main__][INFO] - Epoch:12, Training_loss:0.5936, Eval_loss:0.8039, Eval_acc:0.5000
+[2025-11-06 22:19:00,154][__main__][INFO] - Epoch:13, Training_loss:0.6990, Eval_loss:0.7814, Eval_acc:0.5000
+[2025-11-06 22:19:00,183][__main__][INFO] - Epoch:14, Training_loss:0.6049, Eval_loss:0.7594, Eval_acc:0.5000
+[2025-11-06 22:19:00,210][__main__][INFO] - Epoch:15, Training_loss:0.6371, Eval_loss:0.7446, Eval_acc:0.5000
+[2025-11-06 22:19:00,241][__main__][INFO] - Epoch:16, Training_loss:0.5964, Eval_loss:0.7357, Eval_acc:0.5000
+[2025-11-06 22:19:00,271][__main__][INFO] - Epoch:17, Training_loss:0.6508, Eval_loss:0.7310, Eval_acc:0.5000
+[2025-11-06 22:19:00,304][__main__][INFO] - Epoch:18, Training_loss:0.5968, Eval_loss:0.7286, Eval_acc:0.5000
+[2025-11-06 22:19:00,335][__main__][INFO] - Epoch:19, Training_loss:0.6103, Eval_loss:0.7305, Eval_acc:0.5000
+[2025-11-06 22:19:00,368][__main__][INFO] - Epoch:20, Training_loss:0.5601, Eval_loss:0.7372, Eval_acc:0.5000
+[2025-11-06 22:19:00,401][__main__][INFO] - Epoch:21, Training_loss:0.5958, Eval_loss:0.7501, Eval_acc:0.5000
+[2025-11-06 22:19:00,434][__main__][INFO] - Epoch:22, Training_loss:0.5426, Eval_loss:0.7687, Eval_acc:0.5000
+[2025-11-06 22:19:00,468][__main__][INFO] - Epoch:23, Training_loss:0.6042, Eval_loss:0.7919, Eval_acc:0.5000
+[2025-11-06 22:19:00,495][__main__][INFO] - Epoch:24, Training_loss:0.6178, Eval_loss:0.8071, Eval_acc:0.5000
+[2025-11-06 22:19:00,529][__main__][INFO] - Epoch:25, Training_loss:0.5202, Eval_loss:0.8156, Eval_acc:0.5000
+[2025-11-06 22:19:00,563][__main__][INFO] - Epoch:26, Training_loss:0.6202, Eval_loss:0.8180, Eval_acc:0.5000
+[2025-11-06 22:19:00,592][__main__][INFO] - Epoch:27, Training_loss:0.5300, Eval_loss:0.8111, Eval_acc:0.5000
+[2025-11-06 22:19:00,625][__main__][INFO] - Epoch:28, Training_loss:0.6032, Eval_loss:0.8014, Eval_acc:0.5000
+[2025-11-06 22:19:00,654][__main__][INFO] - Epoch:29, Training_loss:0.6266, Eval_loss:0.7778, Eval_acc:0.5000
+[2025-11-06 22:19:00,684][__main__][INFO] - Epoch:30, Training_loss:0.5707, Eval_loss:0.7523, Eval_acc:0.5000
+[2025-11-06 22:19:00,716][__main__][INFO] - Epoch:31, Training_loss:0.5824, Eval_loss:0.7365, Eval_acc:0.5000
+[2025-11-06 22:19:00,746][__main__][INFO] - Epoch:32, Training_loss:0.5565, Eval_loss:0.7327, Eval_acc:0.5000
+[2025-11-06 22:19:00,776][__main__][INFO] - Epoch:33, Training_loss:0.6162, Eval_loss:0.7351, Eval_acc:0.5000
+[2025-11-06 22:19:00,807][__main__][INFO] - Epoch:34, Training_loss:0.5639, Eval_loss:0.7371, Eval_acc:0.5000
+[2025-11-06 22:19:00,844][__main__][INFO] - Epoch:35, Training_loss:0.5860, Eval_loss:0.7422, Eval_acc:0.5000
+[2025-11-06 22:19:00,874][__main__][INFO] - Epoch:36, Training_loss:0.5410, Eval_loss:0.7494, Eval_acc:0.5000
+[2025-11-06 22:19:00,901][__main__][INFO] - Epoch:37, Training_loss:0.5331, Eval_loss:0.7656, Eval_acc:0.5000
+[2025-11-06 22:19:00,930][__main__][INFO] - Epoch:38, Training_loss:0.5414, Eval_loss:0.7743, Eval_acc:0.5000
+[2025-11-06 22:19:00,960][__main__][INFO] - Epoch:39, Training_loss:0.5249, Eval_loss:0.7674, Eval_acc:0.5000
+[2025-11-06 22:19:00,994][__main__][INFO] - Epoch:40, Training_loss:0.6116, Eval_loss:0.7363, Eval_acc:0.5000
+[2025-11-06 22:19:01,032][__main__][INFO] - Epoch:41, Training_loss:0.5128, Eval_loss:0.6949, Eval_acc:0.5000
+[2025-11-06 22:19:01,062][__main__][INFO] - Epoch:42, Training_loss:0.5195, Eval_loss:0.6886, Eval_acc:0.5000
+[2025-11-06 22:19:01,099][__main__][INFO] - Epoch:43, Training_loss:0.6263, Eval_loss:0.6883, Eval_acc:0.5000
+[2025-11-06 22:19:01,133][__main__][INFO] - Epoch:44, Training_loss:0.5443, Eval_loss:0.6724, Eval_acc:0.5000
+[2025-11-06 22:19:01,164][__main__][INFO] - Epoch:45, Training_loss:0.4731, Eval_loss:0.6869, Eval_acc:0.5556
+[2025-11-06 22:19:01,168][__main__][INFO] - saving best...
+[2025-11-06 22:19:01,251][__main__][INFO] - Epoch:46, Training_loss:0.5168, Eval_loss:0.7425, Eval_acc:0.5000
+[2025-11-06 22:19:01,285][__main__][INFO] - Epoch:47, Training_loss:0.6305, Eval_loss:0.7455, Eval_acc:0.5556
+[2025-11-06 22:19:01,313][__main__][INFO] - Epoch:48, Training_loss:0.5200, Eval_loss:0.6841, Eval_acc:0.5556
+[2025-11-06 22:19:01,346][__main__][INFO] - Epoch:49, Training_loss:0.5360, Eval_loss:0.6354, Eval_acc:0.5000
+[2025-11-06 22:19:01,378][__main__][INFO] - Epoch:50, Training_loss:0.5092, Eval_loss:0.6173, Eval_acc:0.5556
+[2025-11-06 22:19:01,414][__main__][INFO] - Epoch:51, Training_loss:0.5668, Eval_loss:0.6221, Eval_acc:0.5556
+[2025-11-06 22:19:01,441][__main__][INFO] - Epoch:52, Training_loss:0.5076, Eval_loss:0.6422, Eval_acc:0.5000
+[2025-11-06 22:19:01,474][__main__][INFO] - Epoch:53, Training_loss:0.4753, Eval_loss:0.6945, Eval_acc:0.5556
+[2025-11-06 22:19:01,503][__main__][INFO] - Epoch:54, Training_loss:0.5170, Eval_loss:0.7352, Eval_acc:0.5556
+[2025-11-06 22:19:01,537][__main__][INFO] - Epoch:55, Training_loss:0.5331, Eval_loss:0.7097, Eval_acc:0.5556
+[2025-11-06 22:19:01,572][__main__][INFO] - Epoch:56, Training_loss:0.5108, Eval_loss:0.6441, Eval_acc:0.5556
+[2025-11-06 22:19:01,610][__main__][INFO] - Epoch:57, Training_loss:0.4883, Eval_loss:0.6182, Eval_acc:0.5556
+[2025-11-06 22:19:01,640][__main__][INFO] - Epoch:58, Training_loss:0.5735, Eval_loss:0.6340, Eval_acc:0.5556
+[2025-11-06 22:19:01,668][__main__][INFO] - Epoch:59, Training_loss:0.4808, Eval_loss:0.6474, Eval_acc:0.5000
+[2025-11-06 22:19:01,701][__main__][INFO] - Epoch:60, Training_loss:0.6182, Eval_loss:0.6358, Eval_acc:0.5556
+[2025-11-06 22:19:01,731][__main__][INFO] - Epoch:61, Training_loss:0.5239, Eval_loss:0.5915, Eval_acc:0.6111
+[2025-11-06 22:19:01,734][__main__][INFO] - saving best...
+[2025-11-06 22:19:01,796][__main__][INFO] - Epoch:62, Training_loss:0.5209, Eval_loss:0.5748, Eval_acc:0.6111
+[2025-11-06 22:19:01,828][__main__][INFO] - Epoch:63, Training_loss:0.5487, Eval_loss:0.5909, Eval_acc:0.6111
+[2025-11-06 22:19:01,860][__main__][INFO] - Epoch:64, Training_loss:0.5040, Eval_loss:0.6179, Eval_acc:0.5556
+[2025-11-06 22:19:01,890][__main__][INFO] - Epoch:65, Training_loss:0.4652, Eval_loss:0.6712, Eval_acc:0.5556
+[2025-11-06 22:19:01,919][__main__][INFO] - Epoch:66, Training_loss:0.4895, Eval_loss:0.7482, Eval_acc:0.5556
+[2025-11-06 22:19:01,948][__main__][INFO] - Epoch:67, Training_loss:0.6113, Eval_loss:0.7355, Eval_acc:0.5556
+[2025-11-06 22:19:01,976][__main__][INFO] - Epoch:68, Training_loss:0.5836, Eval_loss:0.6258, Eval_acc:0.5556
+[2025-11-06 22:19:02,008][__main__][INFO] - Epoch:69, Training_loss:0.4565, Eval_loss:0.5621, Eval_acc:0.6111
+[2025-11-06 22:19:02,040][__main__][INFO] - Epoch:70, Training_loss:0.5358, Eval_loss:0.5598, Eval_acc:0.6111
+[2025-11-06 22:19:02,070][__main__][INFO] - Epoch:71, Training_loss:0.5358, Eval_loss:0.5989, Eval_acc:0.6111
+[2025-11-06 22:19:02,103][__main__][INFO] - Epoch:72, Training_loss:0.4689, Eval_loss:0.6701, Eval_acc:0.5556
+[2025-11-06 22:19:02,129][__main__][INFO] - Epoch:73, Training_loss:0.5006, Eval_loss:0.7308, Eval_acc:0.5556
+[2025-11-06 22:19:02,169][__main__][INFO] - Epoch:74, Training_loss:0.5130, Eval_loss:0.7641, Eval_acc:0.5556
+[2025-11-06 22:19:02,224][__main__][INFO] - Epoch:75, Training_loss:0.5033, Eval_loss:0.7426, Eval_acc:0.5556
+[2025-11-06 22:19:02,260][__main__][INFO] - Epoch:76, Training_loss:0.4865, Eval_loss:0.6969, Eval_acc:0.5556
+[2025-11-06 22:19:02,289][__main__][INFO] - Epoch:77, Training_loss:0.4971, Eval_loss:0.6528, Eval_acc:0.5556
+[2025-11-06 22:19:02,326][__main__][INFO] - Epoch:78, Training_loss:0.4868, Eval_loss:0.6295, Eval_acc:0.5556
+[2025-11-06 22:19:02,361][__main__][INFO] - Epoch:79, Training_loss:0.5043, Eval_loss:0.6432, Eval_acc:0.5556
+[2025-11-06 22:19:02,403][__main__][INFO] - Epoch:80, Training_loss:0.5313, Eval_loss:0.6690, Eval_acc:0.5556
+[2025-11-06 22:19:02,437][__main__][INFO] - Epoch:81, Training_loss:0.4398, Eval_loss:0.6904, Eval_acc:0.5556
+[2025-11-06 22:19:02,476][__main__][INFO] - Epoch:82, Training_loss:0.4919, Eval_loss:0.7059, Eval_acc:0.5556
+[2025-11-06 22:19:02,523][__main__][INFO] - Epoch:83, Training_loss:0.5228, Eval_loss:0.6935, Eval_acc:0.5556
+[2025-11-06 22:19:02,570][__main__][INFO] - Epoch:84, Training_loss:0.4881, Eval_loss:0.6590, Eval_acc:0.5556
+[2025-11-06 22:19:02,607][__main__][INFO] - Epoch:85, Training_loss:0.5379, Eval_loss:0.6161, Eval_acc:0.6111
+[2025-11-06 22:19:02,687][__main__][INFO] - Epoch:86, Training_loss:0.4771, Eval_loss:0.5973, Eval_acc:0.6111
+[2025-11-06 22:19:02,724][__main__][INFO] - Epoch:87, Training_loss:0.5557, Eval_loss:0.6108, Eval_acc:0.6111
+[2025-11-06 22:19:02,755][__main__][INFO] - Epoch:88, Training_loss:0.4389, Eval_loss:0.6319, Eval_acc:0.5556
+[2025-11-06 22:19:02,793][__main__][INFO] - Epoch:89, Training_loss:0.5050, Eval_loss:0.6487, Eval_acc:0.5556
+[2025-11-06 22:19:02,832][__main__][INFO] - Epoch:90, Training_loss:0.4855, Eval_loss:0.6373, Eval_acc:0.5556
+[2025-11-06 22:19:02,870][__main__][INFO] - Epoch:91, Training_loss:0.5511, Eval_loss:0.6107, Eval_acc:0.6111
+[2025-11-06 22:19:02,934][__main__][INFO] - Epoch:92, Training_loss:0.4825, Eval_loss:0.5815, Eval_acc:0.6667
+[2025-11-06 22:19:02,938][__main__][INFO] - saving best...
+[2025-11-06 22:19:03,033][__main__][INFO] - Epoch:93, Training_loss:0.5005, Eval_loss:0.5981, Eval_acc:0.6111
+[2025-11-06 22:19:03,063][__main__][INFO] - Epoch:94, Training_loss:0.4297, Eval_loss:0.6885, Eval_acc:0.5556
+[2025-11-06 22:19:03,110][__main__][INFO] - Epoch:95, Training_loss:0.4467, Eval_loss:0.7628, Eval_acc:0.5556
+[2025-11-06 22:19:03,145][__main__][INFO] - Epoch:96, Training_loss:0.4273, Eval_loss:0.7967, Eval_acc:0.5556
+[2025-11-06 22:19:03,178][__main__][INFO] - Epoch:97, Training_loss:0.4690, Eval_loss:0.7916, Eval_acc:0.5556
+[2025-11-06 22:19:03,221][__main__][INFO] - Epoch:98, Training_loss:0.4998, Eval_loss:0.7372, Eval_acc:0.5556
+[2025-11-06 22:19:03,256][__main__][INFO] - Epoch:99, Training_loss:0.4992, Eval_loss:0.6677, Eval_acc:0.5556
+[2025-11-06 22:19:03,293][__main__][INFO] - Epoch:100, Training_loss:0.4679, Eval_loss:0.6047, Eval_acc:0.6111
+[2025-11-06 22:19:03,327][__main__][INFO] - Epoch:101, Training_loss:0.5070, Eval_loss:0.5934, Eval_acc:0.6111
+[2025-11-06 22:19:03,358][__main__][INFO] - Epoch:102, Training_loss:0.4770, Eval_loss:0.6167, Eval_acc:0.6111
+[2025-11-06 22:19:03,392][__main__][INFO] - Epoch:103, Training_loss:0.4351, Eval_loss:0.6509, Eval_acc:0.5556
+[2025-11-06 22:19:03,429][__main__][INFO] - Epoch:104, Training_loss:0.4609, Eval_loss:0.7073, Eval_acc:0.5556
+[2025-11-06 22:19:03,464][__main__][INFO] - Epoch:105, Training_loss:0.4747, Eval_loss:0.7476, Eval_acc:0.5556
+[2025-11-06 22:19:03,500][__main__][INFO] - Epoch:106, Training_loss:0.4928, Eval_loss:0.7432, Eval_acc:0.5556
+[2025-11-06 22:19:03,536][__main__][INFO] - Epoch:107, Training_loss:0.4393, Eval_loss:0.7128, Eval_acc:0.5556
+[2025-11-06 22:19:03,570][__main__][INFO] - Epoch:108, Training_loss:0.4575, Eval_loss:0.6740, Eval_acc:0.5556
+[2025-11-06 22:19:03,600][__main__][INFO] - Epoch:109, Training_loss:0.4563, Eval_loss:0.6253, Eval_acc:0.6111
+[2025-11-06 22:19:03,633][__main__][INFO] - Epoch:110, Training_loss:0.4955, Eval_loss:0.5858, Eval_acc:0.6667
+[2025-11-06 22:19:03,682][__main__][INFO] - Epoch:111, Training_loss:0.4854, Eval_loss:0.5871, Eval_acc:0.6667
+[2025-11-06 22:19:03,735][__main__][INFO] - Epoch:112, Training_loss:0.4881, Eval_loss:0.6394, Eval_acc:0.5556
+[2025-11-06 22:19:03,767][__main__][INFO] - Epoch:113, Training_loss:0.4647, Eval_loss:0.6802, Eval_acc:0.5556
+[2025-11-06 22:19:03,804][__main__][INFO] - Epoch:114, Training_loss:0.6023, Eval_loss:0.6668, Eval_acc:0.5556
+[2025-11-06 22:19:03,842][__main__][INFO] - Epoch:115, Training_loss:0.4311, Eval_loss:0.6153, Eval_acc:0.6111
+[2025-11-06 22:19:03,874][__main__][INFO] - Epoch:116, Training_loss:0.4161, Eval_loss:0.5993, Eval_acc:0.6111
+[2025-11-06 22:19:03,903][__main__][INFO] - Epoch:117, Training_loss:0.5090, Eval_loss:0.6098, Eval_acc:0.6111
+[2025-11-06 22:19:03,936][__main__][INFO] - Epoch:118, Training_loss:0.4437, Eval_loss:0.6274, Eval_acc:0.6111
+[2025-11-06 22:19:03,968][__main__][INFO] - Epoch:119, Training_loss:0.4370, Eval_loss:0.6552, Eval_acc:0.5556
+[2025-11-06 22:19:04,001][__main__][INFO] - Epoch:120, Training_loss:0.5416, Eval_loss:0.6590, Eval_acc:0.5556
+[2025-11-06 22:19:04,035][__main__][INFO] - Epoch:121, Training_loss:0.5802, Eval_loss:0.6279, Eval_acc:0.6111
+[2025-11-06 22:19:04,066][__main__][INFO] - Epoch:122, Training_loss:0.4698, Eval_loss:0.5961, Eval_acc:0.6667
+[2025-11-06 22:19:04,098][__main__][INFO] - Epoch:123, Training_loss:0.4278, Eval_loss:0.5923, Eval_acc:0.6667
+[2025-11-06 22:19:04,128][__main__][INFO] - Epoch:124, Training_loss:0.5172, Eval_loss:0.6256, Eval_acc:0.6111
+[2025-11-06 22:19:04,159][__main__][INFO] - Epoch:125, Training_loss:0.4736, Eval_loss:0.6863, Eval_acc:0.5556
+[2025-11-06 22:19:04,190][__main__][INFO] - Epoch:126, Training_loss:0.5031, Eval_loss:0.7210, Eval_acc:0.5556
+[2025-11-06 22:19:04,223][__main__][INFO] - Epoch:127, Training_loss:0.3896, Eval_loss:0.7138, Eval_acc:0.5556
+[2025-11-06 22:19:04,256][__main__][INFO] - Epoch:128, Training_loss:0.3994, Eval_loss:0.7062, Eval_acc:0.5556
+[2025-11-06 22:19:04,292][__main__][INFO] - Epoch:129, Training_loss:0.4617, Eval_loss:0.6838, Eval_acc:0.5556
+[2025-11-06 22:19:04,323][__main__][INFO] - Epoch:130, Training_loss:0.4092, Eval_loss:0.6480, Eval_acc:0.5556
+[2025-11-06 22:19:04,358][__main__][INFO] - Epoch:131, Training_loss:0.5503, Eval_loss:0.6278, Eval_acc:0.6111
+[2025-11-06 22:19:04,390][__main__][INFO] - Epoch:132, Training_loss:0.4607, Eval_loss:0.6167, Eval_acc:0.6111
+[2025-11-06 22:19:04,419][__main__][INFO] - Epoch:133, Training_loss:0.4311, Eval_loss:0.6444, Eval_acc:0.5556
+[2025-11-06 22:19:04,448][__main__][INFO] - Epoch:134, Training_loss:0.4103, Eval_loss:0.7041, Eval_acc:0.5556
+[2025-11-06 22:19:04,478][__main__][INFO] - Epoch:135, Training_loss:0.4690, Eval_loss:0.7498, Eval_acc:0.5556
+[2025-11-06 22:19:04,508][__main__][INFO] - Epoch:136, Training_loss:0.4111, Eval_loss:0.7445, Eval_acc:0.5556
+[2025-11-06 22:19:04,541][__main__][INFO] - Epoch:137, Training_loss:0.4842, Eval_loss:0.7161, Eval_acc:0.5556
+[2025-11-06 22:19:04,573][__main__][INFO] - Epoch:138, Training_loss:0.4383, Eval_loss:0.6657, Eval_acc:0.5556
+[2025-11-06 22:19:04,603][__main__][INFO] - Epoch:139, Training_loss:0.5079, Eval_loss:0.6064, Eval_acc:0.6667
+[2025-11-06 22:19:04,636][__main__][INFO] - Epoch:140, Training_loss:0.4921, Eval_loss:0.5784, Eval_acc:0.6667
+[2025-11-06 22:19:04,666][__main__][INFO] - Epoch:141, Training_loss:0.5038, Eval_loss:0.5937, Eval_acc:0.6667
+[2025-11-06 22:19:04,697][__main__][INFO] - Epoch:142, Training_loss:0.4670, Eval_loss:0.6170, Eval_acc:0.6111
+[2025-11-06 22:19:04,730][__main__][INFO] - Epoch:143, Training_loss:0.4102, Eval_loss:0.6555, Eval_acc:0.5556
+[2025-11-06 22:19:04,761][__main__][INFO] - Epoch:144, Training_loss:0.4818, Eval_loss:0.7031, Eval_acc:0.5556
+[2025-11-06 22:19:04,791][__main__][INFO] - Epoch:145, Training_loss:0.3526, Eval_loss:0.7299, Eval_acc:0.5556
+[2025-11-06 22:19:04,826][__main__][INFO] - Epoch:146, Training_loss:0.4749, Eval_loss:0.7436, Eval_acc:0.5556
+[2025-11-06 22:19:04,859][__main__][INFO] - Epoch:147, Training_loss:0.4072, Eval_loss:0.7399, Eval_acc:0.5556
+[2025-11-06 22:19:04,889][__main__][INFO] - Epoch:148, Training_loss:0.4680, Eval_loss:0.7036, Eval_acc:0.5556
+[2025-11-06 22:19:04,920][__main__][INFO] - Epoch:149, Training_loss:0.4068, Eval_loss:0.6415, Eval_acc:0.6111
+[2025-11-06 22:19:04,952][__main__][INFO] - Epoch:150, Training_loss:0.5053, Eval_loss:0.6068, Eval_acc:0.6667
+[2025-11-06 22:19:04,984][__main__][INFO] - Epoch:151, Training_loss:0.3643, Eval_loss:0.5847, Eval_acc:0.6667
+[2025-11-06 22:19:05,028][__main__][INFO] - Test loss: 0.5292, test acc 0.7500

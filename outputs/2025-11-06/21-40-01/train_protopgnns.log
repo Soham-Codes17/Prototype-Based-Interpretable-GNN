@@ -1,0 +1,45 @@
+[2025-11-06 21:40:01,202][__main__][INFO] - seed: 42
+device_id: 0
+use_pretrained: true
+pretrained_dataset: null
+datasets:
+  dataset_root: ./data
+  dataset_name: mutag
+  random_split_flag: true
+  data_split_ratio:
+  - 0.8
+  - 0.1
+  - 0.1
+models:
+  gnn_name: gcn
+  gnn_saving_dir: C:\Users\soham\Desktop\AI project\PrototypeGNN\protop_checkpoints\42
+  param:
+    graph_classification: true
+    batch_size: 128
+    num_epochs: 300
+    num_early_stop: 50
+    learning_rate1: 0.001
+    learning_rate2: 0.001
+    weight_decay1: 0.0001
+    weight_decay2: 0.0001
+    basis_dim: 128
+    num_basis_per_class: 10
+    gnn_latent_dim:
+    - 128
+    - 128
+    - 128
+    fc_latent_dim:
+    - 128
+    gnn_dropout: 0.0
+    fc_dropout: 0.0
+
+[2025-11-06 21:40:02,003][__main__][INFO] - GCNNet(
+  (readout_layer): GNNPool()
+  (convs): ModuleList(
+    (0): GCNConv(7, 128)
+    (1-2): 2 x GCNConv(128, 128)
+  )
+  (mlps): ModuleList(
+    (0-1): 2 x Linear(in_features=128, out_features=128, bias=True)
+  )
+)
